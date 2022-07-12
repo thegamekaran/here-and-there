@@ -1,0 +1,183 @@
+@use "./vars";
+
+@font-face {
+  font-family: "CroisMain";
+  src: url("/static/font/poppins.italic.ttf");
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CroisMain";
+  src: url("/static/font/poppins.extralight.ttf");
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CroisMain";
+  src: url("/static/font/poppins.light.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CroisMain";
+  src: url("/static/font/poppins.medium.ttf");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CroisMain";
+  src: url("/static/font/poppins.bold.ttf");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CroisMain";
+  src: url("/static/font/poppins.extrabold.ttf");
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CroisMain";
+  src: url("/static/font/poppins.regular.ttf");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/static/font/Roboto-Light.ttf");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("/static/font/Roboto-Regular.ttf");
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "CroisMain", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-weight: normal;
+  min-width: 300px;
+  color: vars.$txt;
+  background: vars.$bg;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*Globals*/
+
+.ta {
+  text-align: center;
+}
+
+.pr {
+  position: relative;
+}
+
+.page {
+  .f {
+    display: flex;
+    /* Overriding toast css conflict */
+    /* position: relative;
+    bottom: unset;
+    right: unset;
+    width: unset;
+    transform: none;
+    transition: none;
+    min-height: unset; */
+  }
+}
+
+.fc {
+  justify-content: center;
+  align-items: center;
+}
+
+.fw {
+  flex-wrap: wrap;
+}
+.fa {
+  align-items: center;
+}
+
+.fs {
+  justify-content: space-between;
+}
+.fv {
+  flex-direction: column;
+}
+.br {
+  border-radius: 50%;
+}
+
+.ck {
+  cursor: pointer;
+}
+
+.m {
+  display: none !important;
+}
+@media (max-width: 640px) {
+  .d {
+    display: none !important;
+  }
+  .m {
+    display: block !important;
+  }
+  .page .m.f {
+    display: flex !important;
+  }
+}
+
+h1,
+p {
+  margin: 1em 0;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+h2 {
+  margin: 0.8em 0;
+  font-weight: bold;
+}
+h4 {
+  margin: 1.33em 0;
+}
+
+/* Scrollbar */
+
+@media (min-width: 640px) {
+  ::-webkit-scrollbar {
+    background: transparent;
+    width: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: vars.$txt;
+    border-radius: 5px;
+  }
+}

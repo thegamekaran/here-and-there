@@ -1,0 +1,28 @@
+@use "./vars";
+
+@mixin normalH1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+@mixin tileStyle {
+  background: vars.$shadebg;
+  border-radius: 20px;
+  border: 1px solid vars.$border2;
+}
+
+@mixin input {
+  @include tileStyle;
+  background: transparent;
+  padding: 10px;
+  margin-left: 5px;
+  outline: none;
+  color: vars.$txt;
+  font-weight: bold;
+  border-width: 2px;
+}
+
+@mixin inputFocus {
+  outline: none;
+  border-color: vars.$clr3;
+}

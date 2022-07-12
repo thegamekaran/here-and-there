@@ -1,0 +1,33 @@
+@use "../../styles/mixins";
+
+.input-wrap:focus-within {
+  @include mixins.inputFocus;
+}
+.input-wrap {
+  @include mixins.tileStyle;
+  border-width: 2px;
+  input {
+    @include mixins.input;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    width: 80%;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  h4 {
+    max-width: fit-content;
+    text-align: right;
+    width: fit-content;
+    margin: 0 10px;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
